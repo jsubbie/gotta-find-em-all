@@ -1,1 +1,2 @@
-# gotta-find-em-all
+# gottafindthemall
+Pokemon Go Analysis 

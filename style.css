@@ -1,0 +1,84 @@
+
+html {
+    height: auto; 
+    width: auto
+}
+
+body {
+    height: auto; 
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    border-style: solid;
+    border-width: thin;
+  }
+  
+#map {
+    height: 90%;
+    border-style: solid; 
+    border-width: thin; 
+    color: rgb(27, 39, 39)
+}
+
+#map,
+body,
+html {
+    height: 90%;
+    } 
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(27, 39, 39)
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change hover to red  */
+li a:hover {
+    background-color:rgb(197, 7, 7);
+}
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif; 
+    color: rgb(27, 39, 39)
+    }
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif; 
+    color: rgb(27, 39, 39)
+    }
+
+p {
+    font-family: Arial, Helvetica, sans-serif; 
+    color: rgb(27, 39, 39)
+    }
+
+.header img {
+    float: left;
+    top: 18px;
+    width: 25px;
+    height: 25px
+    }
+
+.header h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+    }    
+
+
+  
