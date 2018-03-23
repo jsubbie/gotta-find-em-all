@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PokemonMarkerClusters</title>
+        
+        <!-- Leaflet JS & CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
+        <!-- d3 JS -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+        <!-- Marker Cluster JS & CSS -->
+        <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+        <!-- Our CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- JS logic file -->
+        <script type="text/javascript" src="logic.js"></script>
+  </head>
+    <body>
+        <div class="header">
+            <img src="icon/Pokeball.svg" alt="Pokeball" />
+            <h2>Pokemon Marker Clusters</h2>
+            <ul>
+                <li><a class="active" href="http://0.0.0.0:8080/index.html">Home</a></li>
+                <li><a href="http://0.0.0.0:8080/PokemonMarkerClusters.html">Pokemon Cluster Sightings</a></li>
+                <li><a href="http://0.0.0.0:8080/PokemonSightingsCarto.html">Pokemon Sightings Carto </a></li>
+                <li><a href="http://0.0.0.0:8080/custom_kanto.html">Custom "Kanto" Route </a></li>
+              </ul>
+          </div> 
+            <div id = "mapholder">
+              <p> Have you ever wanted to be the very best - like no one ever was? To catch them all is THE real test, and to train them is your 
+                cause. You will travel across the land searching far and wide to teach every Pokemon the power that's inside. Pokemon, gotta 
+                catch'em all!
+              </p>
+              <div id="map"></div>
+            </div>
+          
+            <div class="footer">
+              <p>Mighty-Matplots 2018</p>
+            </div>
+
+      <script type="text/javascript" src="logic.js"></script>
+    </body>
+</html>

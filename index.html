@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Gotta Find 'Em All!</title>
+  <title>Gotta Find'Em All!</title>
 
   <!-- Leaflet CSS & JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
@@ -11,31 +11,29 @@
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
+<body>
 <div class="header">
-  <img src="images/Pokeball.svg" alt="Pokeball" />
-  <h2>Gotta Find 'Em All</h2>
+  <img src="icon/Pokeball.svg" alt="Pokeball" />
+  <h2>Gotta Find'Em All</h2>
   <ul>
-      <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a class="active" href="http://0.0.0.0:8080/index.html">Home</a></li>
+      <li><a href="http://0.0.0.0:8080/PokemonMarkerClusters.html">Pokemon Cluster Sightings</a></li>
+      <li><a href="http://0.0.0.0:8080/PokemonSightingsCarto.html">Pokemon Sightings Carto </a></li>
+      <li><a href="http://0.0.0.0:8080/custom_kanto.html">Custom "Kanto" Route </a></li>
     </ul>
 </div> 
-  <div>
-    <p>Bacon ipsum dolor amet nulla alcatra sed, cillum ullamco exercitation sint burgdoggen non drumstick. 
-    Hamburger incididunt chicken, bacon capicola andouille strip steak short ribs labore aliqua salami elit. 
-    Do reprehenderit pastrami nostrud, picanha landjaeger swine eu biltong doner. Flank irure andouille prosciutto jerky. 
-    Tongue chuck reprehenderit, ad tri-tip dolore kielbasa nulla labore. Aute sint dolore ipsum ribeye strip steak aliqua 
-    swine cupidatat corned beef meatball tail minim pork chop cillum.
+  <div id = "mapholder">
+    <p> Have you ever wanted to be the very best - like no one ever was? To catch them all is THE real test, and to train them is your 
+      cause. You will travel across the land searching far and wide to teach every Pokemon the power that's inside. Pokemon, gotta 
+      catch'em all!
     </p>
+    <div id="map"></div>
   </div>
 
-<body>
-  <!-- The div where we will inject our map -->
-  <div id="map"></div>
-
+  <div class="footer">
+    <p>Mighty-Matplots 2018</p>
+  </div>
+  
   <!-- Our JS -->
-  <script type="text/javascript" src="logic.js"></script>
 </body>
 </html>

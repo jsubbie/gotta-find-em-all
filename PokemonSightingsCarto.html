@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pokemon Cluster Sightings</title>
+
+    <!-- Leaflet JS & CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
+    <!-- d3 JS -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Marker Cluster JS & CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+      <div class="header">
+          <img src="icon/Pokeball.svg" alt="Pokeball" />
+          <h2>Pokemon Cluster Sightings</h2>
+          <ul>
+              <li><a class="active" href="http://0.0.0.0:8080/index.html">Home</a></li>
+              <li><a href="http://0.0.0.0:8080/PokemonMarkerClusters.html">Pokemon Cluster Sightings</a></li>
+              <li><a href="http://0.0.0.0:8080/PokemonSightingsCarto.html">Pokemon Sightings Carto </a></li>
+              <li><a href="http://0.0.0.0:8080/custom_kanto.html">Custom "Kanto" Route </a></li>
+            </ul>
+        </div> 
+          <div id = "mapholder">
+            <p> Have you ever wanted to be the very best - like no one ever was? To catch them all is THE real test, and to train them is your 
+              cause. You will travel across the land searching far and wide to teach every Pokemon the power that's inside. Pokemon, gotta 
+              catch'em all!
+            </p>
+            <iframe width="100%" height="740" frameborder="0" src="https://ashshri1.carto.com/builder/a106e3cc-352f-454e-b301-5c024f743d65/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> 
+          </div>    
+          <div class="footer">
+            <p>Mighty-Matplots 2018</p>
+          </div>
+  </body>
+</html>
