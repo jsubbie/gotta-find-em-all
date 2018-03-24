@@ -62,40 +62,70 @@ var baseURL = {
   console.log(response);
 
 
-  // Creating a new marker cluster group
+  var $PokemonSelectBtn = document.querySelector(".panel .btn.btn-primary");
 
-     var markers = L.markerClusterGroup();
-
-  // Loop through our data...
-    for (var i = 0; i < response.length; i++) {
-    // set the data location property to a variable
-      var Lat = response[i].Latitude;
-      var Lon = response[i].Longitude;
-
-    // If the data has a location property...
-      if (Lat) {
+// Add click event listeners to the buttons, call the functions passed in
+  $PokemonSelectBtn.addEventListener("click", handlePokemonButtonClick);
+ 
+  var markers = L.markerClusterGroup();
 
 
-    var pokemonIcon = L.icon({
-        iconUrl:  response[i].ImageURL,
-        iconSize:     [100, 100], // size of the icon
-        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-    });
 
-    if (response[i].ImageURL) { 
-      markers.addLayer(L.marker([Lat, Lon], {icon: pokemonIcon})
-      .bindPopup("Name : " + response[i].Name + " Type : " + response[i].Type2  + "<br>Weather : <br>" + response[i].Weather + pokemonIcon));
-    }
+  function handlePokemonButtonClick() {
 
-    else {
-      markers.addLayer(L.marker([Lat, Lon])
-      .bindPopup("Name : " + response[i].Name + " Type : " + response[i].Type2  + "<br>Weather : <br>" + response[i].Weather));      
-    }
 
-     }
-   }
-    myMap.addLayer(markers);
+          markers.clearLayers();
+
+           var pokemonSelected  =  document.getElementById("PokemonName").value;
+
+           console.log("onclick"+pokemonSelected);
+
+          // Creating a new marker cluster group
+
+            //myMap.removeLayer(markers);
+
+
+            //markers.clearLayers();
+
+            //console.log("remove marker layer");
+
+          // Loop through our data...
+            for (var i = 0; i < response.length; i++) {
+            // set the data location property to a variable
+              var Lat = response[i].Latitude;
+              var Lon = response[i].Longitude;
+
+            // If the data has a location property...
+              if (Lat) {
+
+
+            var pokemonIcon = L.icon({
+                iconUrl:  response[i].ImageURL,
+                iconSize:     [100, 100], // size of the icon
+                iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+            });
+
+            if (pokemonSelected == "All"  || pokemonSelected == response[i].Name) {
+
+                  if (response[i].ImageURL) { 
+                    markers.addLayer(L.marker([Lat, Lon], {icon: pokemonIcon})
+                    .bindPopup("Name : " + response[i].Name + " Type : " + response[i].Type2  + "<br>Weather : <br>" + response[i].Weather + pokemonIcon));
+                  }
+
+                  else {
+                    markers.addLayer(L.marker([Lat, Lon])
+                    .bindPopup("Name : " + response[i].Name + " Type : " + response[i].Type2  + "<br>Weather : <br>" + response[i].Weather));      
+                  }
+
+                   }
+                 }
+          }
+
+
+            myMap.addLayer(markers);
+        }
+
 });
 
 
