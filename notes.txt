@@ -1,0 +1,44 @@
+Run this in git bash to import pokemon_final.csv into database called pokemon and collection called pokemon
+mongoimport -d pokemon -c pokemon --type csv --file pokemon_final.csv --headerline
+
+new one:
+mongoimport --db pokemon --collection pokemon --file pokemon_mongo_data.json
+
+how to do a near query with lat longs (long comes first in coordinates [lon,lat])
+db.pokemon.find({
+    "loc": {
+        $near: {
+            $geometry:
+                { type: "Point", coordinates: [74.36, 40.46] }
+        }
+    }
+})
+
+this needs to be run on the database, adding a '2dsphere' index on the loc column so near queries work:
+db.pokemon.createIndex({loc:"2dsphere"});
+
+
+Run in folder to open server at localhost:8080: python -m http.server 8080
+0.0.0.0 doesn't work on your windows pc, so use 127.0.0.1 or localhost in its place to make it work
+
+
+
+How to make this all work together:
+Step 1:
+I need to give them all of my code
+
+Step 2:
+Create a database in mongo db called pokemon
+Step 3:
+Create a collection in pokemon database called pokemon
+Step 4:
+Run in terminal: mongoimport --db pokemon --collection pokemon --file pokemon_mongo_data.json
+Step 5: 
+Run in mongo db: db.pokemon.createIndex({loc:"2dsphere"});
+
+
+
+Step 6:
+They need to run mongod
+Step 7:
+They need to run my python app.py

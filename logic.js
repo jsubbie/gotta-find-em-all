@@ -128,5 +128,34 @@ var baseURL = {
 
 });
 
+//Get reference to zipcode search button
+var searchBtnZip = document.querySelector("#zip");
 
+// Add an event listener to the searchButton, call handleSearchButtonClick when clicked
+searchBtnZip.addEventListener("click", handleSearchButton);
+
+function handleSearchButton(user_input) {
+
+var user_input = searchBtnZip.value;
+
+var polyLineUrl = "http://localhost:5000/get_data/" + user_input;
+console.log(user_input)
+
+ d3.json(polyLineUrl, function(error, response) {
+ console.log("pulled polyLineUrl");
+ console.log(error);
+ console.log(response);
+
+for (i=0; i<response.length; i++){
+ for (j=0; j<response[i].length; j++){
+   for (k=0; k<response[i][j].steps.length; k++){
+     console.log(response[i][j].steps[k].polyline.points);
+    L.Polyline.fromEncoded(response[i][j].steps[k].polyline.points).addTo(myMap);
+   }
+ }
+};
+
+myMap.fitBounds(polyLine.getBounds());
+
+})};
 
