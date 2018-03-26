@@ -10,16 +10,15 @@ body {
     padding: 10px;
     margin: 10px;
 }
-  
-#map {
-    height: 85%;
-    border-style: solid; 
-    border-width: thin; 
-    color: rgb(27, 39, 39)
-}
+
+#map,
+body,
+html {
+    height: 83%;
+} 
 
 #mapholder {
-    height: 88%
+    height: 90%;
 }
 
 #imageholder {
@@ -29,17 +28,19 @@ body {
 
 #wrap {
     width:90%;
-    margin: 20px;
+    margin: 15px;
 }
 
 #left_col {
    float:left;
-   width:450px;
+   margin: 25px;
+   width:400px;
 }
 
 #right_col {
    float:right;
-   width:700px;
+   margin: 25px;
+   width:725px;
 }
 
 .center {
@@ -47,13 +48,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    }
-
-#map,
-body,
-html {
-    height: 90%;
-} 
+}
 
 ul {
     list-style-type: none;
@@ -94,6 +89,10 @@ h2 {
 p {
     font-family: Arial, Helvetica, sans-serif; 
     color: rgb(27, 39, 39)
+}
+
+form-group {
+    display:inline-block;
 }
 
 .header img {
