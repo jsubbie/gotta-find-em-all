@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gotta Find'Em All! (BETA)</title>
+
+    <!-- Leaflet JS & CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
+    <!-- d3 JS -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Marker Cluster JS & CSS -->
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <img src="./static/icon/Pokeball.svg" alt="Pokeball" />
+        <h2>Gotta Find'Em All!</h2>
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/PokemonSightingsMarkerCluster">Pokemon Sightings (by Name and Location)</a></li>
+            <li><a href="/PokemonSightingsCarto">Pokemon Sightings (by Type, T.O.D., and Weather Condition) </a></li>
+          </ul>
+      </div> 
+        <div id = "mapholder">
+          <p> From here you can sort sightings by Pokemon Type, T.O.D (Time of Day), and Weather Conditions.
+          </p>
+          <iframe width="100%" height="740" frameborder="0" src="https://ashshri1.carto.com/builder/a106e3cc-352f-454e-b301-5c024f743d65/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> 
+        </div>    
+        <div class="footer">
+          <p>A Mighty-Matplots Project - 2018</p>
+        </div>
+  </body>
+</html>

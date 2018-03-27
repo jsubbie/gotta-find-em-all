@@ -17,6 +17,18 @@ client = pymongo.MongoClient(conn)
 db = client.pokemon
 collection = db.pokemon
 
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/PokemonSightingsCarto")
+def carto():
+    return render_template("PokemonSightingsCarto.html")
+
+@app.route("/PokemonSightingsMarkerCluster")
+def sightings():
+    return render_template("/PokemonSightingsMarkerCluster.html")
+
 @app.route("/get_data/<zipcode>")
 def return_json(zipcode):
 	gkey = "AIzaSyDzyP9E2Cr-NujfGLny6dFxi_gE9QVBi24"

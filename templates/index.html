@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gotta Find'Em All! (BETA)</title>
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="./static/style.css">
+
+</head>
+  <body>
+    <div class="header">
+              <a href="https://youtu.be/Cfvg_B7Bef8">
+                <img src="./static/icon/Pokeball.svg" alt="Pokeball"/>
+                </a>
+      <h2>Gotta Find'Em All</h2>
+      <ul>
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="/PokemonSightingsMarkerCluster">Pokemon Sightings (by Name and Location)</a></li>
+          <li><a href="/PokemonSightingsCarto">Pokemon Sightings (by Type, T.O.D., and Weather Condition) </a></li>
+        </ul>
+    </div> 
+      <div id = "imageholder">
+          <div id="wrap">
+              <div id="left_col">
+                <h2>About Our Project</h2>
+                  <p> Have you ever wanted to be the very best - like no one ever was? To catch them all is THE real test, and to train them is your 
+                      cause. You will travel across the land searching far and wide to teach every Pokemon the power that's inside. Pokemon, gotta 
+                      catch'em all!
+                    </p>
+                    <p>
+                      Welcome aspiring all aspiring PokeMasters! Have you ever thought: "Hey my Poke-Dex, is cool and all, but 
+                      why can't we us it to find Pokemon?!" Well, this application was developed to help aspiring Pokemon Go! 
+                      masters, locate all the first generation Pokemon from around the world. 
+                    </p>
+                    <p> Using player-generated data and advanced data visualization tools, PokeMasters of all walks of life will be 
+                      able to find specific Pokemon based upon: 1) Name, 2) Type, 3) Weather conditions, and 4) time of day. 
+                    </p>
+                    <p> 
+                      BETA: Plot your own custom "Kanto Journey!" - Plug in your zipcode and the application will plot the best 
+                      possible route to help you find all First Generation in Pokemon Go! 
+                    </p>
+              </div>
+                    <div id="right_col">
+                      <h2>Generation 1</h2> 
+                      <img src="./static/icon/Gen1.png" alt="Generation 1" class = "center">
+                    </div>
+              </div>
+        <div id="map"></div>
+      </div>
+      
+      <div class="footer">
+        <p>A Mighty-Matplots Project 2018</p>
+      </div>
+  
+  
+  </body>
+</html>
